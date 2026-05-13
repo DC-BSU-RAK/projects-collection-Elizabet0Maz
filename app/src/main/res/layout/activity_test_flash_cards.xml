@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainhome"
+    tools:context=".TestFlashCardsActivity">
+
+    <ImageView
+        android:id="@+id/bgTopper"
+        android:layout_width="509dp"
+        android:layout_height="580dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/test_topper" />
+
+    <ImageView
+        android:id="@+id/bgDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="89dp"
+        android:layout_marginBottom="207dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bgTopper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bgTopper"
+        app:srcCompat="@drawable/rect_test" />
+
+    <ImageView
+        android:id="@+id/backBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/bgDisplay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/backarrow" />
+
+    <TextView
+        android:id="@+id/ansQue"
+        android:layout_width="288dp"
+        android:layout_height="220dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="37dp"
+        android:fontFamily="@font/merienda_one"
+        android:text="Answer / Question"
+        android:textColor="#0049AC"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bgDisplay"
+        app:layout_constraintEnd_toEndOf="@+id/bgDisplay"
+        app:layout_constraintStart_toStartOf="@+id/bgTopper"
+        app:layout_constraintTop_toTopOf="@+id/bgDisplay" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/nextbtn" />
+
+    <Button
+        android:id="@+id/showAns"
+        android:layout_width="320dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="204dp"
+        android:backgroundTint="#C4DFF4"
+        android:fontFamily="@font/merienda_one"
+        android:text="Show Answer"
+        android:textColor="#0049AC"
+        android:textColorLink="#0049AC"
+        android:textSize="26sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ansQue"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/feedBack"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bgDisplay"
+        app:layout_constraintVertical_bias="0.337">
+
+        <Button
+            android:id="@+id/correct"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginBottom="30dp"
+            android:backgroundTint="#C4DFF4"
+            android:fontFamily="@font/merienda_one"
+            android:text="Correct!"
+            android:textColor="#0049AC"
+            android:textColorLink="#0049AC"
+            android:textSize="26sp"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="619dp" />
+
+        <Button
+            android:id="@+id/wrong"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:backgroundTint="#0049AC"
+            android:fontFamily="@font/merienda_one"
+            android:text="Wrong"
+            android:textColor="#C4DFF4"
+            android:textColorLink="#0049AC"
+            android:textSize="26sp"
+            tools:layout_editor_absoluteX="27dp"
+            tools:layout_editor_absoluteY="619dp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
