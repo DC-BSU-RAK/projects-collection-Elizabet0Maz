@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainhome"
+    tools:context=".HomeScreenActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_basic"
+                android:layout_width="186dp"
+                android:layout_height="170dp"
+                app:layout_constraintBottom_toBottomOf="@+id/imgFrame"
+                app:layout_constraintEnd_toEndOf="@+id/imgFrame"
+                app:layout_constraintStart_toStartOf="@+id/imgFrame"
+                app:layout_constraintTop_toTopOf="@+id/imgFrame"
+                app:layout_constraintVertical_bias="0.32"
+                app:srcCompat="@drawable/introimg" />
+
+            <ImageView
+                android:id="@+id/imgFrame"
+                android:layout_width="268dp"
+                android:layout_height="291dp"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/frame" />
+
+            <TextView
+                android:id="@+id/userNameDisplay"
+                android:layout_width="132dp"
+                android:layout_height="29dp"
+                android:fontFamily="@font/merienda_one"
+                android:text="The Name"
+                android:textColor="#0049AF"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@+id/imgFrame"
+                app:layout_constraintEnd_toEndOf="@+id/imgFrame"
+                app:layout_constraintStart_toStartOf="@+id/imgFrame"
+                app:layout_constraintTop_toTopOf="@+id/imgFrame"
+                app:layout_constraintVertical_bias="0.85" />
+
+            <ImageView
+                android:id="@+id/settings"
+                android:layout_width="88dp"
+                android:layout_height="94dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgFrame"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.1"
+                app:srcCompat="@drawable/settings" />
+
+            <ImageView
+                android:id="@+id/help"
+                android:layout_width="87dp"
+                android:layout_height="121dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imgFrame"
+                app:layout_constraintTop_toBottomOf="@+id/settings"
+                app:srcCompat="@drawable/question" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.694"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imgFrame"
+                app:srcCompat="@drawable/plus" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/groupRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:nestedScrollingEnabled="false"
+                android:paddingBottom="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/plus" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
